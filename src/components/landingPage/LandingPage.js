@@ -76,8 +76,6 @@ export default function LandingPage() {
             <section data-bs-version="5.1" className="image3 cid-s48upRUlSD" id="image3-9">
 
 
-
-
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-12 col-lg-6">
@@ -126,8 +124,6 @@ export default function LandingPage() {
                     <div className="media-container-row align-center mbr-white">
                         <div className="row row-links">
                             <ul className="foot-menu">
-
-
 
 
 
