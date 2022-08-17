@@ -3,9 +3,9 @@ import React from 'react';
 import { Outlet, Navigate } from 'react-router-dom';
 
 
-export default function PrivateRoutes({ authenticated }) {
+export default function PrivateRoutes({ signed }) {
 
     return (
-        authenticated ? <Outlet /> : <Navigate to="/" />
+        signed ? <Outlet /> : <Navigate to="/" />
     )
 }
