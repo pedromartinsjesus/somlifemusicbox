@@ -14,6 +14,11 @@ import { Link } from 'react-router-dom';
 
 export default function LandingPage() {
 
+    /*  Github password - delete this line before production build */
+    /*     let key = process.env.REACT_APP_GITHUB_KEY;
+        console.log("Github password: " + key); */
+
+
     return (
         <div>
             <section data-bs-version="5.1" className="menu cid-s48OLK6784" id="menu1-h">
