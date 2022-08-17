@@ -10,7 +10,7 @@ import "../../assets/socicon/css/styles.css";
 import "../../assets/theme/css/style.css";
 import "../../assets/mobirise/css/mbr-additional.css";
 import "../../assets/mobirise/css/mbr-additional.css";
-
+import { Link } from 'react-router-dom';
 
 export default function LandingPage() {
 
@@ -23,7 +23,7 @@ export default function LandingPage() {
                             <span className="navbar-logo">
                                 <img src="/images/mbr-182x315.png" alt="Mobirise Website Builder" />
                             </span>
-                            <span className="navbar-caption-wrap"><a className="navbar-caption text-white display-7" href="https://mobiri.se">Estudio Som Life</a></span>
+                            <span className="navbar-caption-wrap"><a className="navbar-caption text-white display-7" href=" ">Estudio Som Life</a></span>
                         </div>
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                             <div className="hamburger">
@@ -36,7 +36,7 @@ export default function LandingPage() {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav nav-dropdown" data-app-modern-menu="true"><li className="nav-item"></li></ul>
 
-                            <div className="navbar-buttons mbr-section-btn"><a className="btn btn-success display-4" href="https://mobiri.se"><span className="mbrib-login mbr-iconfont mbr-iconfont-btn"></span>Login</a></div>
+                            <div className="navbar-buttons mbr-section-btn"><Link to="login" className="btn btn-success display-4"><span className="mbrib-login mbr-iconfont mbr-iconfont-btn"></span>Login</Link></div>
                         </div>
                     </div>
                 </nav>
@@ -74,8 +74,6 @@ export default function LandingPage() {
             </section>
 
             <section data-bs-version="5.1" className="image3 cid-s48upRUlSD" id="image3-9">
-
-
 
 
                 <div className="container">
@@ -126,8 +124,6 @@ export default function LandingPage() {
                     <div className="media-container-row align-center mbr-white">
                         <div className="row row-links">
                             <ul className="foot-menu">
-
-
 
 
 
