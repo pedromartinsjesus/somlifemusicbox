@@ -1,6 +1,9 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+/* import { getAnalytics } from "firebase/analytics"; */
+import { getFirestore } from "@firebase/firestore";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -17,7 +20,35 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const firebase = initializeApp(firebaseConfig);
-const analytics = getAnalytics(firebase);
 
-export default firebase;
+/* export const analytics = getAnalytics(firebaseConfigApp); */
+
+
+
+
+export const appConfig = initializeApp(firebaseConfig);
+export const db = getFirestore();
+
+
+/* export function checkUser() {
+    const auth = getAuth(appConfig)
+    let userApp;
+
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            // User is signed in, see docs for a list of available properties
+            // https://firebase.google.com/docs/reference/js/firebase.User
+            userApp = user.displayName;
+            // ...
+        } else {
+            // User is signed out
+            // ...
+        }
+    })
+
+
+    return userApp ? userApp : "NADA"
+} */
+
+
+

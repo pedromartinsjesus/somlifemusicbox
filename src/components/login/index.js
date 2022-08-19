@@ -1,26 +1,26 @@
 import React, { useState } from 'react';
 import "../../assetsLogin/css/styles.css";
 import "../../assetsLogin/css/Google-Style-Login.css";
-
+import { useNavigate } from 'react-router-dom';
 import { getAuth, signInWithEmailAndPassword as signInUser } from 'firebase/auth';
-import firebaseConfig from '../../firebase';
+import { appConfig } from '../../firebase';
 
 
-export default function Login({ handleAuthenticated }) {
+export default function Login() {
 
-    let auth = getAuth(firebaseConfig);
+    const auth = getAuth(appConfig);
+    let navigate = useNavigate();
 
     const [email, setEmail] = useState(" ");
     const [password, setPassword] = useState(" ");
-
-
 
 
     const handleLogin = (e) => {
         e.preventDefault();
         signInUser(auth, email, password)
             .then((userCredential) => {
-                handleAuthenticated(true);
+                navigate("/musicplayer");
+
             })
             .catch((error) => {
                 alert("Email ou senha incorretos")
