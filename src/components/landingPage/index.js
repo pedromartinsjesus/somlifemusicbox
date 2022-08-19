@@ -11,42 +11,12 @@ import "../../assets/theme/css/style.css";
 import "../../assets/mobirise/css/mbr-additional.css";
 import "../../assets/mobirise/css/mbr-additional.css";
 import { Link } from 'react-router-dom';
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import { appConfig } from '../../firebase';
-import { useNavigate } from 'react-router-dom';
 
 export default function LandingPage() {
 
     /*  Github password - delete this line before production build */
     /*     let key = process.env.REACT_APP_GITHUB_KEY;
         console.log("Github password: " + key); */
-
-    const auth = getAuth(appConfig);
-
-    let navigate = useNavigate()
-
-    const checkUser = () => {
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                navigate("/musicplayer")
-            }
-        });
-
-        /*   if (user) {
-            console.log(user);
-            /*  navigate(`/musicplayer/${user.currentUser}`); */
-        /*  }
-             else {
-             console.log("Landing Page: NAO AUTENTICADO")
-         } * / */
-    }
-
-    useEffect(() => {
-        checkUser()
-
-    }, [])
-
-
 
     return (
         <div>

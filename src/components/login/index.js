@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "../../assetsLogin/css/styles.css";
 import "../../assetsLogin/css/Google-Style-Login.css";
 import { useNavigate } from 'react-router-dom';
-import { getAuth, signInWithEmailAndPassword as signInUser } from 'firebase/auth';
+import { getAuth, signInWithEmailAndPassword as signInUser, onAuthStateChanged } from 'firebase/auth';
 import { appConfig } from '../../firebase';
+
+
 
 
 export default function Login() {
@@ -13,6 +15,20 @@ export default function Login() {
 
     const [email, setEmail] = useState(" ");
     const [password, setPassword] = useState(" ");
+
+    useEffect(() => {
+        function checkUser() {
+            onAuthStateChanged(auth, (user) => {
+                if (user) {
+                    navigate("/musicplayer")
+                }
+            });
+        }
+
+        checkUser()
+
+    }, [])
+
 
 
     const handleLogin = (e) => {
