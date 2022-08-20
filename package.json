@@ -1,5 +1,6 @@
 {
   "name": "somlife_musicbox",
+  "homepage": "http://somlife.epizy.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
