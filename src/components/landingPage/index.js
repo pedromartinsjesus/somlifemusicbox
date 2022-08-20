@@ -18,6 +18,10 @@ export default function LandingPage() {
     /*     let key = process.env.REACT_APP_GITHUB_KEY;
         console.log("Github password: " + key); */
 
+    const style = {
+        color: '#fff'
+    }
+
     return (
         <div>
             <section data-bs-version="5.1" className="menu cid-s48OLK6784" id="menu1-h">
@@ -29,19 +33,9 @@ export default function LandingPage() {
                             </span>
                             <span className="navbar-caption-wrap"><a className="navbar-caption text-white display-7" href=" ">Estudio Som Life</a></span>
                         </div>
-                        <button className="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                            <div className="hamburger">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                        </button>
-                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul className="navbar-nav nav-dropdown" data-app-modern-menu="true"><li className="nav-item"></li></ul>
 
-                            <div className="navbar-buttons mbr-section-btn"><Link to="login" className="btn btn-success display-4"><span className="mbrib-login mbr-iconfont mbr-iconfont-btn"></span>Login</Link></div>
-                        </div>
+                        <Link to="login" style={style}>Login</Link>
+
                     </div>
                 </nav>
 
