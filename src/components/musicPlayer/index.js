@@ -11,14 +11,23 @@ export default function MusicPlayer() {
 
     const [songArray, setSongArray] = useState([]);
     const [userDisplayName, setUserDisplayName] = useState("");
+    const [photo, setPhoto] = useState("");
+
 
     const auth = getAuth();
 
     useEffect(() => {
-
         checkUser();
 
     }, [])
+
+    const checkPhoto = () => {
+
+
+        if (userDisplayName === "Azenaildes Ribeiro") {
+            setPhoto("/images/azenaildes.png");
+        }
+    }
 
 
     const checkUser = () => {
@@ -35,6 +44,7 @@ export default function MusicPlayer() {
 
     useEffect(() => {
         getSongs();
+        checkPhoto();
     }, [userDisplayName])
 
     const getSongs = async () => {
@@ -70,11 +80,15 @@ export default function MusicPlayer() {
     return (
         <div className='mainDiv'>
             <div className='containerDiv'>
-                <h4 style={{ color: '#fff', fontWeight: 'bolder' }}>{userDisplayName}</h4>
+                <div className='information'>
+                    <img alt='foto cantora' className='foto' height="50px" src={photo}></img>
+                    <h5 className="singerName" style={{ color: '#fff', fontWeight: 'bolder' }}>{userDisplayName}</h5>
+                </div>
+
                 {listMusic()}
 
             </div>
-        </div>
+        </div >
     )
 
 }
